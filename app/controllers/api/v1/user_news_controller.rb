@@ -2,18 +2,18 @@ module Api
     module V1
         class UserNewsController < ApplicationController
             def create
-                user = UserNew.new(user_new_params)
+                user = UserNew.new(name: params[:name], pwd: params[:pwd])
                 if user.save 
                     render json: { status: 'SUCCESS', data: user }
                 else
                     render json: { status: 'SUCCESS', data: user.errors }
                 end
             end
-            private
+            # private
 
-            def user_new_params
-                params[:user_new].permit(:name, :pwd)
-            end
+            # def user_new_params
+            #     params[:user_new].permit(:name, :pwd)
+            # end
         end
     end 
 end 
