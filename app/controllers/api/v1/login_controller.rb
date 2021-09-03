@@ -6,7 +6,7 @@ module Api
         def login
           login_user = UserNew.find_by(name: params[:name], pwd: params[:pwd])
             if login_user != nil
-              render json: { status: 'SUCCESS', data: login }
+              render json: { status: 'SUCCESS', data: login_user }
             else
               render plain: 'no auth'
             end
