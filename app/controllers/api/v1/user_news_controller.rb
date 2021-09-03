@@ -12,7 +12,7 @@ module Api
             private
 
             def user_new_params
-                params.require(:user_new).permit(:name, :pwd)
+                params.require(:user_news).permit(:name, :pwd)
             end
         end
     end 

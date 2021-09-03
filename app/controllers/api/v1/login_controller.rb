@@ -12,6 +12,15 @@ module Api
             end
         end
         
+        def destroy
+            # user = User.find(params[:user_id)
+            if sign_out(user)
+                render :json => {success: true}
+            else
+                render :json => {success: false}
+            end
+        end
+        
         def authenticate
           authenticate_or_request_with_http_token do |token,options|
             auth_user = UserNew.find_by(token: token)
