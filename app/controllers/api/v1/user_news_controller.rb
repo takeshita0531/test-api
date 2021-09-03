@@ -3,7 +3,11 @@ module Api
         class UserNewsController < ApplicationController
             
             def create
-                user = UserNew.new(params[:name], params[:pwd])
+                name = params[:name]
+                pwd = params[:pwd]
+                user = UserNew.new
+                user.naem = name
+                user.pwd = pwd
                 if user.save 
                     render json: { status: 'SUCCESS', data: user }
                 else
