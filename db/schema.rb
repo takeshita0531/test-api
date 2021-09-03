@@ -10,6 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210903050009) do
+ActiveRecord::Schema.define(version: 20210903055749) do
+
+  create_table "user_news", force: :cascade do |t|
+    t.string   "name"
+    t.string   "pwd"
+    t.string   "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["token"], name: "index_user_news_on_token", unique: true
+  end
 
 end
