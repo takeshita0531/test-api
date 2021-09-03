@@ -5,7 +5,7 @@ module Api
         skip_before_action :verify_authenticity_token
         private
         def sign_up_params
-          params.require(:registration).permit(:name, :nickname, :email, :image, :password, :password_confirmation)
+          params.require(:registration).permit(:name, :nickname, :email, :image, :password, :password_confirmation, :tokens)
         end
         def account_update_params
           params.require(:registration).permit(:name, :nickname, :email, :image)
