@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20210830014529) do
     t.string   "nickname"
     t.string   "image"
     t.string   "email"
-    t.text     "tokens"
+    t.string   "tokens"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
