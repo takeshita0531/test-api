@@ -58,6 +58,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_token_auth (1.2.0)
+      bcrypt (~> 3.0)
+      devise (> 3.5.2, < 5)
+      rails (>= 4.2.0, < 6.2)
     erubis (2.7.0)
     execjs (2.8.1)
     ffi (1.15.3)
@@ -92,6 +96,8 @@ GEM
     puma (3.12.6)
     racc (1.5.2)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7.2)
@@ -175,11 +181,13 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  devise_token_auth
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.0)
   sass-rails (~> 5.0)
   spring
